@@ -1,15 +1,8 @@
-cmake_minimum_required(VERSION 3.6)
-project(Algoritmia_Basica)
+cmake_minimum_required(VERSION 3.9)
+project(AlgoritmiaBasica1)
 
-set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCE_FILES
-        Algoritmo.cpp
-        Algoritmo.h
-        Frontera.cpp
-        Frontera.h
-        main.cpp
-        Nodo.cpp
-        Nodo.h Generador.cpp Generador.h)
-
-add_executable(Algoritmia_Basica ${SOURCE_FILES})
+add_executable(GeneradorPruebas generador_pruebas.cpp nodo_pruebas.h  nodo_pruebas.cpp variables_globales.h)
+add_executable(Algoritmo main.cpp algoritmo.cpp algoritmo.h Nodo.cpp Nodo.h frontera.cpp frontera.h variables_globales.h)
+add_executable(ComprobadorSolucion comprobar_solucion.cpp variables_globales.h)

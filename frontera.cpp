@@ -2,7 +2,7 @@
 // Created by abel on 1/04/18.
 //
 
-#include "Frontera.h"
+#include "frontera.h"
 
 using namespace std;
 

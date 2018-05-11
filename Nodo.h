@@ -25,6 +25,8 @@ public:
 
     void setExplored();
 
+    int getID();
+
     bool isExplored();
 
     void setConnection(pair<Nodo *, timestamp> connections);

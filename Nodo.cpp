@@ -4,7 +4,7 @@
 
 #include "Nodo.h"
 
-Nodo::Nodo(int id) : id(id){}
+Nodo::Nodo(int id) : id(id) {}
 
 list<pair<Nodo *, timestamp>> Nodo::getConnections(timestamp start, timestamp end) {
     list<pair<Nodo *, timestamp>> connections;
@@ -12,6 +12,10 @@ list<pair<Nodo *, timestamp>> Nodo::getConnections(timestamp start, timestamp en
         if (i.second >= start && i.second <= end) connections.emplace_back(i);
 
     return connections;
+}
+
+int Nodo::getID() {
+    return id;
 }
 
 void Nodo::setExplored() {
@@ -22,7 +26,7 @@ bool Nodo::isExplored() {
     return explored;
 }
 
-void Nodo::setConnection(pair<Nodo *, timestamp> connection){
+void Nodo::setConnection(pair<Nodo *, timestamp> connection) {
     connections.emplace_back(connection);
 }
 

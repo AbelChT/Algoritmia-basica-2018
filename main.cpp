@@ -1,18 +1,18 @@
 #include <iostream>
 #include <map>
 #include <fstream>
-#include <ctime>
 #include "Nodo.h"
-#include "Algoritmo.h"
-#include "Generador.h"
+#include "algoritmo.h"
+#include "variables_globales.h"
 
 using namespace std;
 
 int nodo_inicial, nodo_final, timestamp_inicial, timestamp_final;
 map<int, Nodo *> sistema;
+list<int> traza;
 
 
-void cargarDatos(const char path[]) {
+void cargarDatos(const string &path) {
     // Formato de entrada :
     // En la primera linea va la query. Formato query = ( nodo inicial, timestamp inicial, nodo final, timestamp final)
     // A partir de ahi:
@@ -48,21 +48,42 @@ void cargarDatos(const char path[]) {
     myfile.close();
 }
 
+void guardarSolucion(const string &path, bool solucion) {
+    ofstream myfile;
+    myfile.open(path);
+    if (myfile.is_open()) {
+        myfile << solucion;
+    }
+    myfile.close();
+}
+
 
 int main() {
-    srand((unsigned int) time(0));
-    bool estaInfectado =  funcionGeneradora();
-    cargarDatos("C:\\Users\\Jorge\\Desktop\\Algoritmia PR1\\ficheroPrueba");
+    cout << "Calgando datos" << endl;
+    cargarDatos(node_system_path);
     Frontera frontera;
-    bool resultado = resolveQuery(sistema.find(nodo_inicial)->second, sistema.find(nodo_final)->second, frontera,
-                                  timestamp_inicial, timestamp_final);
 
-    if (estaInfectado && resultado) {
-        cout << "Si" << endl;
-    } else if (!estaInfectado && !resultado){
-        cout << "No" << endl;
-    } else{
-        cout << "Error " << endl;
+    cout << "Ejecutando algoritmo" << endl;
+    clock_t tStart = clock();
+    bool resultado = resolveQuery(sistema.find(nodo_inicial)->second, sistema.find(nodo_final)->second, frontera,
+                                  timestamp_inicial, timestamp_final, traza);
+    clock_t tFinal = clock();
+
+    printf("Tiempo de ejecución algoritmo: %.2fs\n", (double) (tFinal - tStart) / CLOCKS_PER_SEC);
+
+    cout << "Guardando resultado" << endl;
+    guardarSolucion(output_path, resultado);
+
+    if (resultado) {
+        cout << "Si se ha infectado el nodo" << endl;
+        traza.reverse();
+        cout << "Traza de infección: " << endl;
+        for (int i : traza){
+            cout << i << " " << flush;
+        }
+        cout << endl;
+    } else {
+        cout << "No se ha infectado el nodo" << endl;
     }
     return 0;
 }

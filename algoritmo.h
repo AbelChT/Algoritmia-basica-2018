@@ -6,11 +6,13 @@
 #define ALGORITMIABASICA1_ALGORITMO_H
 
 #include "Nodo.h"
-#include "Frontera.h"
+#include "frontera.h"
 #include <list>
 
 using namespace std;
+
 bool
-resolveQuery(Nodo *nodo_inicio, Nodo *nodo_fin,Frontera& frontera, timestamp timestamp_inicio, timestamp timestamp_fin);
+resolveQuery(Nodo *nodo_inicio, Nodo *nodo_fin, Frontera &frontera, timestamp timestamp_inicio,
+             timestamp timestamp_fin, list<int> &traza);
 
 #endif //ALGORITMIABASICA1_ALGORITMO_H
