@@ -1,8 +1,10 @@
 #include <iostream>
 #include <map>
 #include <fstream>
+#include <ctime>
 #include "Nodo.h"
 #include "Algoritmo.h"
+#include "Generador.h"
 
 using namespace std;
 
@@ -48,15 +50,19 @@ void cargarDatos(const char path[]) {
 
 
 int main() {
-    cargarDatos("");
+    srand((unsigned int) time(0));
+    bool estaInfectado =  funcionGeneradora();
+    cargarDatos("C:\\Users\\Jorge\\Desktop\\Algoritmia PR1\\ficheroPrueba");
     Frontera frontera;
     bool resultado = resolveQuery(sistema.find(nodo_inicial)->second, sistema.find(nodo_final)->second, frontera,
                                   timestamp_inicial, timestamp_final);
 
-    if (resultado) {
+    if (estaInfectado && resultado) {
         cout << "Si" << endl;
-    } else {
+    } else if (!estaInfectado && !resultado){
         cout << "No" << endl;
+    } else{
+        cout << "Error " << endl;
     }
     return 0;
 }

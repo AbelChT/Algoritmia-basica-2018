@@ -1,0 +1,78 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Algoritmo.cpp
+Algoritmo.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Algoritmo.h
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Algoritmo.h
+Nodo.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Nodo.h
+Frontera.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Frontera.h
+list
+-
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Frontera.cpp
+Frontera.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Frontera.h
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Frontera.h
+Nodo.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Nodo.h
+utility
+-
+queue
+-
+list
+-
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Generador.cpp
+Generador.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Generador.h
+Nodo.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Nodo.h
+ctime
+-
+set
+-
+algorithm
+-
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Generador.h
+iostream
+-
+fstream
+-
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Nodo.cpp
+Nodo.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Nodo.h
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Nodo.h
+utility
+-
+list
+-
+
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/main.cpp
+iostream
+-
+map
+-
+fstream
+-
+ctime
+-
+Nodo.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Nodo.h
+Algoritmo.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Algoritmo.h
+Generador.h
+C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/Generador.h
+
