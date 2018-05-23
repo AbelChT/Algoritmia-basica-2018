@@ -14,10 +14,13 @@
 #include <random>
 
 // Constantes
-const unsigned int MAX_TIMESTAMP = 1000;
-const unsigned int MIN_NUM_OF_NODES = 500;
-const unsigned int MAX_NUM_OF_NODES = 3000;
-const double PROBABILITY_OF_CONNECTION = 0.04;
+const unsigned int MAX_TIMESTAMP = 1000; // Número máximo de timestamps que pasarán, mientras más alto sea más costarán
+// ejecutarse las pruebas
+const unsigned int MIN_NUM_OF_NODES = 500; // Número mínimo de nodos del sistema
+const unsigned int MAX_NUM_OF_NODES = 3000; // Máximo numero de nodos del sistema, mientras más alto sea más costarán
+// ejecutarse las pruebas
+const double PROBABILITY_OF_CONNECTION = 0.04; // Mientras más alta mas posibilidades de que dos nodos se conecten, por
+// lo que más probabilidad de infección existe
 
 // Solucion
 unsigned int numNodes, infectedNode, initTimestamp, finalTimestamp, finalNode;
@@ -62,23 +65,25 @@ bool funcionGeneradora() {
     }
 
     for (int i = 1; i < MAX_TIMESTAMP; i++) {
-        cout<< i << endl;
+        cout << "Calculando timestamp " << i << " de " << MAX_TIMESTAMP << endl;
         bool has_been_new_infection = true;
         while (has_been_new_infection) {
             has_been_new_infection = false;
             for (int j = 1; j <= numNodes; j++) {
                 for (int z = j + 1; z <= numNodes; z++) {
-                    auto actual_pair = make_pair<unsigned int, unsigned int>(j,z);
+                    auto actual_pair = make_pair<unsigned int, unsigned int>(j, z);
                     if (distribution(generator) && connection_pairs.find(actual_pair) == connection_pairs.end()) {
                         connections.emplace_back(make_tuple(j, z, i));
                         connection_pairs.insert(actual_pair);
-                        if (nodes[j - 1].isInfected() && !nodes[z - 1].isInfected()&& nodes[j - 1].getTimestampOfInfection() <= i) {
+                        if (nodes[j - 1].isInfected() && !nodes[z - 1].isInfected() &&
+                            nodes[j - 1].getTimestampOfInfection() <= i) {
                             nodes[z - 1].setInfected();
                             nodes[z - 1].setTimestampOfInfection(i);
                             has_been_new_infection = true;
                         }
 
-                        if (nodes[z - 1].isInfected() &&!nodes[j - 1].isInfected()&& nodes[z - 1].getTimestampOfInfection() <= i) {
+                        if (nodes[z - 1].isInfected() && !nodes[j - 1].isInfected() &&
+                            nodes[z - 1].getTimestampOfInfection() <= i) {
                             nodes[j - 1].setInfected();
                             nodes[j - 1].setTimestampOfInfection(i);
                             has_been_new_infection = true;
@@ -112,15 +117,22 @@ void guardarSolucion(const string &path, bool solucion) {
     myfile.close();
 }
 
-int main() {
-    auto resultado = funcionGeneradora();
-    if (resultado) {
-        cout << "Si" << endl;
+int main(int argc, char* argv[]) {
+    if(argc == 3){
+        auto resultado = funcionGeneradora();
+        if (resultado) {
+            cout << "Solución: El nodo ha resultado infectado" << endl;
+        } else {
+            cout << "Solución: El nodo no ha resultado infectado" << endl;
+        }
+        guardarConexiones(argv[1]);
+        guardarSolucion(argv[2], resultado);
+        return 0;
     } else {
-        cout << "No" << endl;
+        cout
+                << "Error: Ha de especificar el nombre que tomará el fichero de pruebas generado como primer parámetro y el nombre del fichero con la solución correcta como segundo parámetro"
+                << endl;
+        return 1;
     }
-    guardarConexiones(node_system_path);
-    guardarSolucion(correct_output_path, resultado);
-    return 0;
 }
 

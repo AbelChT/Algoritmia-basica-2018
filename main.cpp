@@ -58,32 +58,39 @@ void guardarSolucion(const string &path, bool solucion) {
 }
 
 
-int main() {
-    cout << "Calgando datos" << endl;
-    cargarDatos(node_system_path);
-    Frontera frontera;
+int main(int argc, char *argv[]) {
+    if (argc == 3) {
+        cout << "Calgando datos" << endl;
+        cargarDatos(argv[1]);
+        Frontera frontera;
 
-    cout << "Ejecutando algoritmo" << endl;
-    clock_t tStart = clock();
-    bool resultado = resolveQuery(sistema.find(nodo_inicial)->second, sistema.find(nodo_final)->second, frontera,
-                                  timestamp_inicial, timestamp_final, traza);
-    clock_t tFinal = clock();
+        cout << "Ejecutando algoritmo" << endl;
+        clock_t tStart = clock();
+        bool resultado = resolveQuery(sistema.find(nodo_inicial)->second, sistema.find(nodo_final)->second, frontera,
+                                      timestamp_inicial, timestamp_final, traza);
+        clock_t tFinal = clock();
 
-    printf("Tiempo de ejecución algoritmo: %.2fs\n", (double) (tFinal - tStart) / CLOCKS_PER_SEC);
+        printf("Tiempo de ejecución algoritmo: %.2fs\n", (double) (tFinal - tStart) / CLOCKS_PER_SEC);
 
-    cout << "Guardando resultado" << endl;
-    guardarSolucion(output_path, resultado);
+        cout << "Guardando resultado" << endl;
+        guardarSolucion(argv[2], resultado);
 
-    if (resultado) {
-        cout << "Si se ha infectado el nodo" << endl;
-        traza.reverse();
-        cout << "Traza de infección: " << endl;
-        for (int i : traza){
-            cout << i << " " << flush;
+        if (resultado) {
+            cout << "Si se ha infectado el nodo" << endl;
+            traza.reverse();
+            cout << "Traza de infección: " << endl;
+            for (int i : traza) {
+                cout << i << " " << flush;
+            }
+            cout << endl;
+        } else {
+            cout << "No se ha infectado el nodo" << endl;
         }
-        cout << endl;
+        return 0;
     } else {
-        cout << "No se ha infectado el nodo" << endl;
+        cout
+                << "Error: Ha de especificar  el nombre del fichero con el sistema de nodos como primer parámetro y el nombre que tomará el fichero de resultados generado como segundo parámetro"
+                << endl;
+        return 1;
     }
-    return 0;
 }

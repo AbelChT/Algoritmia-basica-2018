@@ -1,3 +1,0 @@
-C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/cmake-build-debug/CMakeFiles/Algoritmia_Basica.dir
-C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/Users/Jorge/Desktop/Algoritmia PR1/Algoritmia-Basica/cmake-build-debug/CMakeFiles/rebuild_cache.dir
