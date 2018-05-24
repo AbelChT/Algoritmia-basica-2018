@@ -66,27 +66,39 @@ bool funcionGeneradora() {
 
     for (int i = 1; i < MAX_TIMESTAMP; i++) {
         cout << "Calculando timestamp " << i << " de " << MAX_TIMESTAMP << endl;
-        bool has_been_new_infection = true;
-        while (has_been_new_infection) {
-            has_been_new_infection = false;
+        if (i < initTimestamp || i > finalTimestamp) {
             for (int j = 1; j <= numNodes; j++) {
                 for (int z = j + 1; z <= numNodes; z++) {
                     auto actual_pair = make_pair<unsigned int, unsigned int>(j, z);
                     if (distribution(generator) && connection_pairs.find(actual_pair) == connection_pairs.end()) {
                         connections.emplace_back(make_tuple(j, z, i));
                         connection_pairs.insert(actual_pair);
-                        if (nodes[j - 1].isInfected() && !nodes[z - 1].isInfected() &&
-                            nodes[j - 1].getTimestampOfInfection() <= i) {
-                            nodes[z - 1].setInfected();
-                            nodes[z - 1].setTimestampOfInfection(i);
-                            has_been_new_infection = true;
-                        }
+                    }
+                }
+            }
+        } else {
+            bool has_been_new_infection = true;
+            while (has_been_new_infection) {
+                has_been_new_infection = false;
+                for (int j = 1; j <= numNodes; j++) {
+                    for (int z = j + 1; z <= numNodes; z++) {
+                        auto actual_pair = make_pair<unsigned int, unsigned int>(j, z);
+                        if (distribution(generator) && connection_pairs.find(actual_pair) == connection_pairs.end()) {
+                            connections.emplace_back(make_tuple(j, z, i));
+                            connection_pairs.insert(actual_pair);
+                            if (nodes[j - 1].isInfected() && !nodes[z - 1].isInfected() &&
+                                nodes[j - 1].getTimestampOfInfection() <= i) {
+                                nodes[z - 1].setInfected();
+                                nodes[z - 1].setTimestampOfInfection(i);
+                                has_been_new_infection = true;
+                            }
 
-                        if (nodes[z - 1].isInfected() && !nodes[j - 1].isInfected() &&
-                            nodes[z - 1].getTimestampOfInfection() <= i) {
-                            nodes[j - 1].setInfected();
-                            nodes[j - 1].setTimestampOfInfection(i);
-                            has_been_new_infection = true;
+                            if (nodes[z - 1].isInfected() && !nodes[j - 1].isInfected() &&
+                                nodes[z - 1].getTimestampOfInfection() <= i) {
+                                nodes[j - 1].setInfected();
+                                nodes[j - 1].setTimestampOfInfection(i);
+                                has_been_new_infection = true;
+                            }
                         }
                     }
                 }
@@ -117,8 +129,8 @@ void guardarSolucion(const string &path, bool solucion) {
     myfile.close();
 }
 
-int main(int argc, char* argv[]) {
-    if(argc == 3){
+int main(int argc, char *argv[]) {
+    if (argc == 3) {
         auto resultado = funcionGeneradora();
         if (resultado) {
             cout << "Solución: El nodo ha resultado infectado" << endl;

@@ -6,6 +6,8 @@
 
 Nodo::Nodo(int id) : id(id) {}
 
+// Devuelve los nodos conectados al nodo actual entre start y end
+// Coste: Lineal en número de nodos conectados al nodo actual
 list<pair<Nodo *, timestamp>> Nodo::getConnections(timestamp start, timestamp end) {
     list<pair<Nodo *, timestamp>> connections;
     for (auto i : this->connections)
