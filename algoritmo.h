@@ -13,6 +13,6 @@ using namespace std;
 
 bool
 resolveQuery(Nodo *nodo_inicio, Nodo *nodo_fin, Frontera &frontera, timestamp timestamp_inicio,
-             timestamp timestamp_fin, list<int> &traza);
+             timestamp timestamp_fin);
 
 #endif //ALGORITMIABASICA1_ALGORITMO_H

@@ -12,12 +12,16 @@
 
 using namespace std;
 
-class Frontera {
-    priority_queue<pair<Nodo *, timestamp>> frontera;
-public:
-    void add(list<pair<Nodo *, timestamp>> &connections);
+// El primer elemento identifica el nodo que realiza la infección, el segundo el infectado, y el tercero el timestamp
+typedef tuple<Nodo*, Nodo*, timestamp> elemento_frontera;
 
-    pair<Nodo *, timestamp> getLowest() const;
+class Frontera {
+    priority_queue<elemento_frontera> frontera;
+public:
+
+    void add(list<pair<Nodo*, timestamp >> &connections, Nodo* productor);
+
+    elemento_frontera getLowest() const;
 
     void deleteLowest();
 

@@ -18,6 +18,10 @@ private:
     bool explored = false;
     list<pair<Nodo *, timestamp>> connections;
 
+    // En caso de que el nodo haya sido infectado, contiene el nodo que le infectó
+    Nodo * infector_node = nullptr;
+    timestamp infection_timestamp = 0;
+
 public:
     Nodo(int id);
 
@@ -30,6 +34,14 @@ public:
     bool isExplored();
 
     void setConnection(pair<Nodo *, timestamp> connections);
+
+    void setInfectorNode(Nodo * n);
+
+    void setInfectionTimestamp(timestamp t);
+
+    Nodo * getInfectorNode();
+
+    timestamp getInfectionTimestamp();
 
     friend bool operator==(const Nodo &l, const Nodo &r);
 

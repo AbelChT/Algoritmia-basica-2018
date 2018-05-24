@@ -2,21 +2,22 @@
 // Created by abel on 1/04/18.
 //
 
+#include <tuple>
 #include "frontera.h"
 
 using namespace std;
 
-bool operator<(const pair<Nodo *, timestamp> &l, const pair<Nodo *, timestamp> &r) {
-    return l.second < r.second;
+bool operator<(const elemento_frontera &l, const elemento_frontera &r) {
+    return get<2>(l) < get<2>(r);
 }
 
-void Frontera::add(list<pair<Nodo *, timestamp>> &connections) {
+void Frontera::add(list<pair<Nodo *, timestamp >> &connections, Nodo *productor) {
     for (auto i : connections) {
-        frontera.push(i);
+        frontera.push(make_tuple(productor, i.first, i.second));
     }
 }
 
-pair<Nodo *, timestamp> Frontera::getLowest() const {
+elemento_frontera Frontera::getLowest() const {
     return frontera.top();
 }
 

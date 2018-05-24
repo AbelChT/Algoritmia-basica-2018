@@ -24,6 +24,14 @@ void Nodo::setExplored() {
     explored = true;
 }
 
+void Nodo::setInfectorNode(Nodo * n) {
+    infector_node = n;
+}
+
+void Nodo::setInfectionTimestamp(timestamp t) {
+    infection_timestamp = t;
+}
+
 bool Nodo::isExplored() {
     return explored;
 }
@@ -34,4 +42,12 @@ void Nodo::setConnection(pair<Nodo *, timestamp> connection) {
 
 bool operator==(const Nodo &l, const Nodo &r) {
     return l.id == r.id;
+}
+
+Nodo * Nodo::getInfectorNode(){
+    return infector_node;
+}
+
+timestamp Nodo::getInfectionTimestamp(){
+    return infection_timestamp;
 }

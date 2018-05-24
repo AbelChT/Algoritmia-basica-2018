@@ -9,7 +9,6 @@ using namespace std;
 
 int nodo_inicial, nodo_final, timestamp_inicial, timestamp_final;
 map<int, Nodo *> sistema;
-list<int> traza;
 
 void cargarDatos(const string &path) {
     // Formato de entrada :
@@ -59,13 +58,21 @@ void guardarSolucion(const string &path, bool solucion) {
     myfile.close();
 }
 
-timestamp findInList(list<pair<Nodo *, timestamp>> &l, int valor){
-    for (auto i: l){
-        if(i.first->getID() == valor) return i.second;
-    }
-    return 0;
-}
+void dibujaTraza(list<pair<int,timestamp >> &traza){
+    cout.width(10);
+    cout << "Nodo" << flush;
+    cout.width(10);
+    cout << "Timestamp" << endl;
 
+    for (auto i :traza) {
+        cout.width(10);
+        cout << i.first;
+        cout.width(10);
+        cout << i.second;
+        cout << endl;
+    }
+    cout.width(10);
+}
 
 int main(int argc, char *argv[]) {
     if (argc == 3) {
@@ -81,7 +88,7 @@ int main(int argc, char *argv[]) {
         // Ejecución algoritmo
         // Coste: Lineal en el número de aristas
         bool resultado = resolveQuery(sistema.find(nodo_inicial)->second, sistema.find(nodo_final)->second, frontera,
-                                      timestamp_inicial, timestamp_final, traza);
+                                      timestamp_inicial, timestamp_final);
         clock_t tFinal = clock();
 
         printf("Tiempo de ejecución algoritmo: %.2fs\n", (double) (tFinal - tStart) / CLOCKS_PER_SEC);
@@ -89,31 +96,19 @@ int main(int argc, char *argv[]) {
         cout << "Guardando resultado" << endl;
         guardarSolucion(argv[2], resultado);
 
-        auto actualex = sistema.find(nodo_inicial)->second;
-        auto k = traza.begin();
-        ++k;
-        auto actual_min_timestamp = timestamp_inicial;
-        for (; k !=traza.end(); ++k) {
-            auto conexiones = actualex->getConnections(actual_min_timestamp, timestamp_final);
-            list<pair<int,timestamp >> t;
-            for (auto l : conexiones ){
-                t.push_back(make_pair(l.first->getID(),l.second));
-            }
-            if((actual_min_timestamp = findInList(conexiones, *k))!=0){
-                actualex = sistema.find(*k)->second;
-            }else{
-                int o = 1;
-            }
-
-        }
-
         if (resultado) {
             cout << "Si se ha infectado el nodo" << endl;
             cout << "Traza de infección: " << endl;
-            for (int i : traza) {
-                cout << i << " " << flush;
+            auto actualex = sistema.find(nodo_final)->second;
+            auto nodo_inicial_traza = sistema.find(nodo_inicial)->second;
+            list<pair<int,timestamp >> traza;
+            while (actualex!= nodo_inicial_traza){
+                traza.push_front(make_pair(actualex->getID(),actualex->getInfectionTimestamp()));
+                actualex = actualex->getInfectorNode();
             }
-            cout << endl;
+            traza.push_front(make_pair(nodo_inicial, timestamp_inicial));
+            dibujaTraza(traza);
+
         } else {
             cout << "No se ha infectado el nodo" << endl;
         }
