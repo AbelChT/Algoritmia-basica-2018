@@ -7,8 +7,9 @@
 
 using namespace std;
 
+// Se necesita que tenga más prioridad el elemento con menos time stamp
 bool operator<(const elemento_frontera &l, const elemento_frontera &r) {
-    return get<2>(l) < get<2>(r);
+    return get<2>(l) > get<2>(r);
 }
 
 void Frontera::add(list<pair<Nodo *, timestamp >> &connections, Nodo *productor) {

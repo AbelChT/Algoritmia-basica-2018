@@ -13,6 +13,7 @@ bool resolveQuery(Nodo *nodo_inicio, Nodo *nodo_fin, Frontera &frontera, timesta
     // El nodo inicial (desde el que se empieza la búsqueda) se marca como explorado
     nodo_inicio->setExplored();
 
+
     // Si el nodo inicial es igual al final la búsqueda ha terminado
     if (nodo_inicio->getID() == nodo_fin->getID()) {
         return true;
@@ -21,6 +22,12 @@ bool resolveQuery(Nodo *nodo_inicio, Nodo *nodo_fin, Frontera &frontera, timesta
         // y timestamp_fin
         // coste = caso peor lineal número de nodos
         auto conexiones = nodo_inicio->getConnections(timestamp_inicio, timestamp_fin);
+        list<pair<int,timestamp >> auxiliarDebug;
+        auto actualDebug = nodo_inicio->getID();
+        for(auto r : conexiones){
+            auxiliarDebug.emplace_back(make_pair(r.first->getID(), r.second));
+        }
+
         frontera.add(conexiones, nodo_inicio);
 
         // Obtiene el nodo más pequeño de la frontera y comprueba si ha sido explorado,
