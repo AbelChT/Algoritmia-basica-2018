@@ -14,14 +14,22 @@ bool nodo_pruebas::isInfected() {
     return is_infected;
 }
 
-int nodo_pruebas::getTimestampOfInfection(){
+unsigned int nodo_pruebas::getTimestampOfInfection(){
     return timestamp_of_infection;
 }
 
-void nodo_pruebas::setTimestampOfInfection(int x){
+void nodo_pruebas::setTimestampOfInfection(unsigned int x){
     timestamp_of_infection = x;
 }
 
 bool operator==(const nodo_pruebas &l, const nodo_pruebas &r) {
     return l.id == r.id;
+}
+
+void nodo_pruebas::setInfectorId(unsigned int infector){
+    infector_id = infector;
+}
+
+unsigned int  nodo_pruebas::getInfectorId(){
+    return infector_id;
 }

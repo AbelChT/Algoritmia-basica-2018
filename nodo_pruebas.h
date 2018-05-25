@@ -16,7 +16,8 @@ class nodo_pruebas {
 private:
     unsigned int id;
     bool is_infected = false;
-    int timestamp_of_infection = -1;
+    unsigned int timestamp_of_infection = 0;
+    unsigned int infector_id;
 
 public:
     nodo_pruebas(unsigned int id);
@@ -25,9 +26,13 @@ public:
 
     bool isInfected();
 
-    int getTimestampOfInfection();
+    unsigned int getTimestampOfInfection();
 
-    void setTimestampOfInfection(int);
+    void setTimestampOfInfection(unsigned int ts);
+
+    void setInfectorId(unsigned int infector);
+
+    unsigned int  getInfectorId();
 
     friend bool operator==(const nodo_pruebas &l, const nodo_pruebas &r);
 

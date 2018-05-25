@@ -14,7 +14,7 @@ bool resolveQuery(Nodo *nodo_inicio, Nodo *nodo_fin, Frontera &frontera, timesta
     nodo_inicio->setExplored();
 
     // Si el nodo inicial es igual al final la búsqueda ha terminado
-    if (nodo_inicio == nodo_fin) {
+    if (nodo_inicio->getID() == nodo_fin->getID()) {
         return true;
     } else {
         // Obtengo los nodos a los que me conecto entre los intervalos de tiempo timestamp_inicio

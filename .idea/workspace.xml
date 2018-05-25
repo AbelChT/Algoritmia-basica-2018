@@ -15,13 +15,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a47d14e3-0ce1-4908-adaf-fb46cb96f57f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Nodo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Nodo.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/algoritmo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/algoritmo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algoritmo.h" beforeDir="false" afterPath="$PROJECT_DIR$/algoritmo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/frontera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontera.h" beforeDir="false" afterPath="$PROJECT_DIR$/frontera.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generador_pruebas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/generador_pruebas.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodo_pruebas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/nodo_pruebas.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nodo_pruebas.h" beforeDir="false" afterPath="$PROJECT_DIR$/nodo_pruebas.h" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,11 +32,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="generador_pruebas.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/generador_pruebas.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="71" column="32" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="32" />
+              <folding>
+                <element signature="e#42#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
+            <state relative-caret-position="1710">
+              <caret line="114" column="22" lean-forward="true" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -49,8 +59,8 @@
       <file leaf-file-name="algoritmo.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/algoritmo.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+            <state relative-caret-position="330">
+              <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="53" />
               <folding>
                 <element signature="e#39#55#0" expanded="true" />
               </folding>
@@ -58,11 +68,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="nodo_pruebas.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodo_pruebas.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="nodo_pruebas.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nodo_pruebas.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="node_system0.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cmake-build-debug/node_system0.txt">
           <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="165">
-              <caret line="26391" column="9" lean-forward="true" selection-start-line="26391" selection-start-column="9" selection-end-line="26391" selection-end-column="9" />
+            <state relative-caret-position="177915">
+              <caret line="11861" column="7" selection-start-line="11861" selection-start-column="4" selection-end-line="11861" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -73,9 +101,9 @@
     <findStrings>
       <find>149 549</find>
       <find>641</find>
-      <find>641</find>
       <find>151</find>
       <find>549 641 149</find>
+      <find>237</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -92,25 +120,26 @@
         <option value="$PROJECT_DIR$/ComprobarSolucion.cpp" />
         <option value="$PROJECT_DIR$/Generador.cpp" />
         <option value="$PROJECT_DIR$/variables_globales.h" />
-        <option value="$PROJECT_DIR$/nodo_pruebas.h" />
-        <option value="$PROJECT_DIR$/nodo_pruebas.cpp" />
         <option value="$PROJECT_DIR$/comprobar_solucion.cpp" />
-        <option value="$PROJECT_DIR$/generador_pruebas.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/frontera.h" />
         <option value="$PROJECT_DIR$/algoritmo.h" />
         <option value="$PROJECT_DIR$/Nodo.h" />
         <option value="$PROJECT_DIR$/Nodo.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/frontera.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/algoritmo.cpp" />
+        <option value="$PROJECT_DIR$/nodo_pruebas.h" />
+        <option value="$PROJECT_DIR$/nodo_pruebas.cpp" />
+        <option value="$PROJECT_DIR$/generador_pruebas.cpp" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="25" />
-    <option name="width" value="960" />
-    <option name="height" value="1055" />
+    <option name="x" value="939" />
+    <option name="y" value="291" />
+    <option name="width" value="950" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -118,7 +147,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -135,6 +163,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -159,7 +188,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Algoritmo">
+  <component name="RunManager" selected="Application.GeneradorPruebas">
     <configuration name="Algoritmo" type="CMakeRunConfiguration" factoryName="Application" PROGRAM_PARAMS="&quot;node_system0.txt&quot; &quot;salida0.txt&quot;" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AlgoritmiaBasica1" TARGET_NAME="Algoritmo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AlgoritmiaBasica1" RUN_TARGET_NAME="Algoritmo" />
     <configuration name="Build All" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AlgoritmiaBasica1" RUN_TARGET_NAME="Algoritmo" EXPLICIT_BUILD_TARGET_NAME="all" />
     <configuration name="ComprobadorSolucion" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="AlgoritmiaBasica1" TARGET_NAME="ComprobadorSolucion" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="AlgoritmiaBasica1" RUN_TARGET_NAME="ComprobadorSolucion" />
@@ -201,8 +230,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14166667" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14166667" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32910052" />
       <window_info anchor="bottom" id="CMake" order="7" weight="0.32910052" />
@@ -230,7 +260,8 @@
     <MESSAGE value="Practica finalizada" />
     <MESSAGE value="Añadido scripts (Algoritmo posee errores)" />
     <MESSAGE value="Comentado" />
-    <option name="LAST_COMMIT_MESSAGE" value="Comentado" />
+    <MESSAGE value="Errores generador pruebas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Errores generador pruebas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -295,6 +326,13 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/node_system0.txt">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="395865">
+          <caret line="26391" column="9" lean-forward="true" selection-start-line="26391" selection-start-column="9" selection-end-line="26391" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/algoritmo.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -543,23 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/nodo_pruebas.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
-          <folding>
-            <element signature="e#106#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/nodo_pruebas.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generarPruebas.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -588,32 +609,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/comprobar_solucion.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
-          <folding>
-            <element signature="e#38#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/generador_pruebas.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="116" column="30" selection-start-line="116" selection-start-column="22" selection-end-line="116" selection-end-column="31" />
-          <folding>
-            <element signature="e#42#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/variables_globales.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algoritmo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Nodo.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" selection-start-line="41" selection-end-line="43" selection-end-column="38" />
           <folding>
-            <element signature="e#111#129#0" expanded="true" />
+            <element signature="e#106#124#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -628,33 +643,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algoritmo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/AlgoritmiaBasica1.cbp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nodo.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="41" selection-start-line="41" selection-end-line="43" selection-end-column="38" />
-          <folding>
-            <element signature="e#106#124#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Nodo.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/frontera.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -665,30 +653,68 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/comprobar_solucion.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="12" column="30" lean-forward="true" selection-start-line="12" selection-start-column="30" selection-end-line="12" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="360">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="30" selection-end-line="24" selection-end-column="48" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/algoritmo.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="395">
-          <caret line="32" column="26" lean-forward="true" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
+        <state relative-caret-position="330">
+          <caret line="22" column="45" lean-forward="true" selection-start-line="22" selection-start-column="39" selection-end-line="22" selection-end-column="53" />
           <folding>
             <element signature="e#39#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Nodo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodo_pruebas.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="32" selection-start-line="32" selection-end-line="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nodo_pruebas.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" lean-forward="true" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1710">
+          <caret line="114" column="22" lean-forward="true" selection-start-line="114" selection-start-column="22" selection-end-line="114" selection-end-column="22" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/generador_pruebas.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="71" column="32" selection-start-line="71" selection-start-column="20" selection-end-line="71" selection-end-column="32" />
+          <folding>
+            <element signature="e#42#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/node_system0.txt">
       <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="165">
-          <caret line="26391" column="9" lean-forward="true" selection-start-line="26391" selection-start-column="9" selection-end-line="26391" selection-end-column="9" />
+        <state relative-caret-position="177915">
+          <caret line="11861" column="7" selection-start-line="11861" selection-start-column="4" selection-end-line="11861" selection-end-column="7" />
         </state>
       </provider>
     </entry>

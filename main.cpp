@@ -10,7 +10,7 @@ using namespace std;
 int nodo_inicial, nodo_final, timestamp_inicial, timestamp_final;
 map<int, Nodo *> sistema;
 
-void cargarDatos(const string &path) {
+bool cargarDatos(const string &path) {
     // Formato de entrada :
     // En la primera linea va la query. Formato query = ( nodo inicial, timestamp inicial, nodo final, timestamp final)
     // A partir de ahi:
@@ -45,20 +45,29 @@ void cargarDatos(const string &path) {
             nodo_1n->setConnection(pair<Nodo *, timestamp>(nodo_2n, timestamp_comunicacion));
             nodo_2n->setConnection(pair<Nodo *, timestamp>(nodo_1n, timestamp_comunicacion));
         }
+        myfile.close();
+        return true;
+    } else {
+        myfile.close();
+        return false;
     }
-    myfile.close();
+
 }
 
-void guardarSolucion(const string &path, bool solucion) {
+bool guardarSolucion(const string &path, bool solucion) {
     ofstream myfile;
     myfile.open(path);
     if (myfile.is_open()) {
         myfile << solucion;
+        myfile.close();
+        return true;
+    }else{
+        myfile.close();
+        return false;
     }
-    myfile.close();
 }
 
-void dibujaTraza(list<pair<int,timestamp >> &traza){
+void dibujaTraza(list<pair<int, timestamp >> &traza) {
     cout.width(10);
     cout << "Nodo" << flush;
     cout.width(10);
@@ -79,7 +88,11 @@ int main(int argc, char *argv[]) {
         cout << "Calgando datos" << endl;
         // Carga de datos estructura interna 
         // Coste: Aristas * log(número de nodos)
-        cargarDatos(argv[1]);
+        bool cargado = cargarDatos(argv[1]);
+        if(!cargado){
+            cout << "Error al cargar datos, no se puede abrir el fichero" << endl;
+            return -1;
+        }
         Frontera frontera;
 
         cout << "Ejecutando algoritmo" << endl;
@@ -94,16 +107,22 @@ int main(int argc, char *argv[]) {
         printf("Tiempo de ejecución algoritmo: %.2fs\n", (double) (tFinal - tStart) / CLOCKS_PER_SEC);
 
         cout << "Guardando resultado" << endl;
-        guardarSolucion(argv[2], resultado);
+
+        cargado =  guardarSolucion(argv[2], resultado);
+
+        if(!cargado){
+            cout << "Error al guardar datos, no se puede abrir el fichero" << endl;
+            return -1;
+        }
 
         if (resultado) {
             cout << "Si se ha infectado el nodo" << endl;
             cout << "Traza de infección: " << endl;
             auto actualex = sistema.find(nodo_final)->second;
             auto nodo_inicial_traza = sistema.find(nodo_inicial)->second;
-            list<pair<int,timestamp >> traza;
-            while (actualex!= nodo_inicial_traza){
-                traza.push_front(make_pair(actualex->getID(),actualex->getInfectionTimestamp()));
+            list<pair<int, timestamp >> traza;
+            while (actualex != nodo_inicial_traza) {
+                traza.push_front(make_pair(actualex->getID(), actualex->getInfectionTimestamp()));
                 actualex = actualex->getInfectorNode();
             }
             traza.push_front(make_pair(nodo_inicial, timestamp_inicial));
