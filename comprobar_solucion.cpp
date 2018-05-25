@@ -1,9 +1,9 @@
 //
-// Created by abel on 11/05/18.
+// Created by Abel Chils Trabanco (NIA: 718997) and Jorge Aznar López (NIA: 721556) on 15/05/18.
 //
+
 #include <fstream>
 #include <iostream>
-#include "variables_globales.h"
 
 using namespace std;
 

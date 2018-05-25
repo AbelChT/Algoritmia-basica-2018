@@ -1,5 +1,5 @@
 //
-// Created by abel on 12/03/18.
+// Created by Abel Chils Trabanco (NIA: 718997) and Jorge Aznar López (NIA: 721556) on 12/03/18.
 //
 
 #include <tuple>
@@ -22,12 +22,6 @@ bool resolveQuery(Nodo *nodo_inicio, Nodo *nodo_fin, Frontera &frontera, timesta
         // y timestamp_fin
         // coste = caso peor lineal número de nodos
         auto conexiones = nodo_inicio->getConnections(timestamp_inicio, timestamp_fin);
-        list<pair<int,timestamp >> auxiliarDebug;
-        auto actualDebug = nodo_inicio->getID();
-        for(auto r : conexiones){
-            auxiliarDebug.emplace_back(make_pair(r.first->getID(), r.second));
-        }
-
         frontera.add(conexiones, nodo_inicio);
 
         // Obtiene el nodo más pequeño de la frontera y comprueba si ha sido explorado,

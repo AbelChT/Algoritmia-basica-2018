@@ -1,5 +1,5 @@
 //
-// Created by abel on 11/05/18.
+// Created by Abel Chils Trabanco (NIA: 718997) and Jorge Aznar López (NIA: 721556) on 11/05/18.
 //
 
 #include "nodo_pruebas.h"

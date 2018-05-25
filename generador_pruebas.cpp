@@ -1,9 +1,8 @@
 //
-// Created by Jorge on 02/05/2018.
+// Created by Abel Chils Trabanco (NIA: 718997) and Jorge Aznar López (NIA: 721556) on 2/05/18.
 //
 
 #include "nodo_pruebas.h"
-#include "variables_globales.h"
 #include <ctime>
 #include <set>
 #include <algorithm>
@@ -189,7 +188,7 @@ void mostrarUnaPosibleTrazaInfeccion(vector<nodo_pruebas> &nodes) {
         cout << "Posible traza de infección:" << endl;
 
         for (auto i :traza) {
-            cout << i << " " << flush;
+            cout << i + 1 << " " << flush;
         }
         cout << endl;
     }

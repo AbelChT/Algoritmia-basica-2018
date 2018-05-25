@@ -1,6 +1,6 @@
 #!/bin/bash
 #Genera una prueba aleatoria
-NUMERO_DE_PRUEBAS=10
+NUMERO_DE_PRUEBAS=2
 i=0
 while [ $i -lt $NUMERO_DE_PRUEBAS ]
 do

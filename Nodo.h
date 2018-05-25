@@ -1,5 +1,5 @@
 //
-// Created by abel on 12/03/18.
+// Created by Abel Chils Trabanco (NIA: 718997) and Jorge Aznar López (NIA: 721556) on 12/03/18.
 //
 
 #ifndef ALGORITMIABASICA1_NODO_H

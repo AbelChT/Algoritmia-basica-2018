@@ -1,9 +1,12 @@
+//
+// Created by Abel Chils Trabanco (NIA: 718997) and Jorge Aznar López (NIA: 721556) on 12/03/18.
+//
+
 #include <iostream>
 #include <map>
 #include <fstream>
 #include "Nodo.h"
 #include "algoritmo.h"
-#include "variables_globales.h"
 
 using namespace std;
 
