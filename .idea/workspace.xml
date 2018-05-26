@@ -13,24 +13,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a47d14e3-0ce1-4908-adaf-fb46cb96f57f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Nodo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Nodo.h" beforeDir="false" afterPath="$PROJECT_DIR$/Nodo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algoritmo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/algoritmo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/algoritmo.h" beforeDir="false" afterPath="$PROJECT_DIR$/algoritmo.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/comprobar_solucion.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/comprobar_solucion.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ejecuta.sh" beforeDir="false" afterPath="$PROJECT_DIR$/ejecuta.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/frontera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontera.h" beforeDir="false" afterPath="$PROJECT_DIR$/frontera.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generador_pruebas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/generador_pruebas.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/generarPruebas.sh" beforeDir="false" afterPath="$PROJECT_DIR$/generarPruebas.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodo_pruebas.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/nodo_pruebas.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nodo_pruebas.h" beforeDir="false" afterPath="$PROJECT_DIR$/nodo_pruebas.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/variables_globales.h" beforeDir="false" />
-    </list>
+    <list default="true" id="a47d14e3-0ce1-4908-adaf-fb46cb96f57f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,6 +33,29 @@
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="algoritmo.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/algoritmo.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="cmake_install.cmake" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
@@ -84,20 +90,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="nodo_pruebas.h" pinned="false" current-in-tab="true">
+      <file leaf-file-name="nodo_pruebas.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/nodo_pruebas.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
               <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="algoritmo.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/algoritmo.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -114,18 +111,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="comprobar_solucion.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/comprobar_solucion.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="92" selection-start-line="1" selection-start-column="92" selection-end-line="1" selection-end-column="92" />
-              <folding>
-                <element signature="e#38#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="generador_pruebas.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/generador_pruebas.cpp">
           <provider selected="true" editor-type-id="text-editor">
@@ -133,18 +118,6 @@
               <caret line="1" column="91" selection-start-line="1" selection-start-column="91" selection-end-line="1" selection-end-column="91" />
               <folding>
                 <element signature="e#42#67#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frontera.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/frontera.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="91" selection-start-line="1" selection-start-column="91" selection-end-line="1" selection-end-column="91" />
-              <folding>
-                <element signature="e#38#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -287,7 +260,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1920" height="1055" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14166667" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -320,7 +292,8 @@
     <MESSAGE value="Errores generador pruebas" />
     <MESSAGE value="Errores generador pruebas (falla)" />
     <MESSAGE value="Errores solucionados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Errores solucionados" />
+    <MESSAGE value="Retoques finales" />
+    <option name="LAST_COMMIT_MESSAGE" value="Retoques finales" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -390,13 +363,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Nodo.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/generador_pruebas.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -676,23 +642,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/algoritmo.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-          <folding>
-            <element signature="e#39#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/algoritmo.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -778,6 +727,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
           <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/algoritmo.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="24" column="24" selection-start-line="24" selection-start-column="24" selection-end-line="24" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
         </state>
       </provider>
     </entry>

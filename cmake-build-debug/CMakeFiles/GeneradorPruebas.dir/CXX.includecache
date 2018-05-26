@@ -1,0 +1,46 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/generador_pruebas.cpp
+nodo_pruebas.h
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/nodo_pruebas.h
+variables_globales.h
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/variables_globales.h
+ctime
+-
+set
+-
+algorithm
+-
+iostream
+-
+fstream
+-
+vector
+-
+tuple
+-
+random
+-
+
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/nodo_pruebas.cpp
+nodo_pruebas.h
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/nodo_pruebas.h
+
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/nodo_pruebas.h
+utility
+-
+list
+-
+
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/variables_globales.h
+cstring
+-
+string
+-
+

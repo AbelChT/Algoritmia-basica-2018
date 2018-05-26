@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/comprobar_solucion.cpp
+fstream
+-
+iostream
+-
+variables_globales.h
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/variables_globales.h
+
+/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/variables_globales.h
+cstring
+-
+string
+-
+
