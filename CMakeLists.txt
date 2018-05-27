@@ -1,9 +1,9 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.4.3)
 project(Practica2AlgoritmiaBasica)
 
 set(CMAKE_CXX_STANDARD 11)
 
-add_executable(GeneredorVectores generador_vectores.cpp variables_globales.h)
+add_executable(GeneradorVectores generador_vectores.cpp variables_globales.h)
 
 add_executable(Quicksort algoritmo_criterio_1.cpp variables_globales.h)
 
