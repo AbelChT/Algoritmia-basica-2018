@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/GeneradorPruebas.dir/generador_pruebas.cpp.o CMakeFiles/GeneradorPruebas.dir/nodo_pruebas.cpp.o  -o GeneradorPruebas 

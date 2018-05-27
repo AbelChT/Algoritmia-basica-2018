@@ -1,5 +1,0 @@
-/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/cmake-build-debug/CMakeFiles/ComprobadorSolucion.dir
-/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/cmake-build-debug/CMakeFiles/Algoritmo.dir
-/home/abel/Documentos/Universidad/AlgoritmiaBasica/Practicas/Practica 1/cmake-build-debug/CMakeFiles/GeneradorPruebas.dir

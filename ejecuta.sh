@@ -1,5 +1,7 @@
 #!/bin/bash
-#Genera una prueba aleatoria
+# Autores: Abel Chils Trabanco (NIA:718997) y Jorge Aznar López (NIA:721556)
+# Descripción: Ejecuta el algoritmo sobre $NUMERO_DE_PRUEBAS pruebas diferentes
+# que han debido se ser anteriormente generadas
 NUMERO_DE_PRUEBAS=2
 i=0
 while [ $i -lt $NUMERO_DE_PRUEBAS ]

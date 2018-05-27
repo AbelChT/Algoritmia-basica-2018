@@ -1,1 +1,0 @@
-/usr/bin/c++  -g   CMakeFiles/Algoritmo.dir/main.cpp.o CMakeFiles/Algoritmo.dir/algoritmo.cpp.o CMakeFiles/Algoritmo.dir/Nodo.cpp.o CMakeFiles/Algoritmo.dir/frontera.cpp.o  -o Algoritmo 

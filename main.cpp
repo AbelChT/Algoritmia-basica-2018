@@ -88,7 +88,7 @@ void dibujaTraza(list<pair<int, timestamp >> &traza) {
 
 int main(int argc, char *argv[]) {
     if (argc == 3) {
-        cout << "Calgando datos" << endl;
+        cout << "Cargando datos" << endl;
         // Carga de datos estructura interna 
         // Coste: Aristas * log(número de nodos)
         bool cargado = cargarDatos(argv[1]);
